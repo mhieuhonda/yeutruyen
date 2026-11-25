@@ -1,0 +1,9 @@
+package com.google.android.gms.internal.ads;
+
+import android.widget.ImageView;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-ads-api@@25.3.0 */
+/* JADX INFO: loaded from: classes2.dex */
+public interface zzblz {
+    void zza(ImageView.ScaleType scaleType);
+}

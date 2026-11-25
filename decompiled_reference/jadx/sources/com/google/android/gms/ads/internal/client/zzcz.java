@@ -1,0 +1,27 @@
+package com.google.android.gms.ads.internal.client;
+
+import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Parcel;
+import android.os.RemoteException;
+import com.google.android.gms.dynamic.IObjectWrapper;
+import com.google.android.gms.internal.ads.zzbel;
+import com.google.android.gms.internal.ads.zzben;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-ads-api@@25.3.0 */
+/* JADX INFO: loaded from: classes2.dex */
+public final class zzcz extends zzbel implements IInterface {
+    zzcz(IBinder iBinder) {
+        super(iBinder, "com.google.android.gms.ads.internal.client.IMobileAdsSettingManagerCreator");
+    }
+
+    public final IBinder zze(IObjectWrapper iObjectWrapper, int i) throws RemoteException {
+        Parcel parcelZza = zza();
+        zzben.zze(parcelZza, iObjectWrapper);
+        parcelZza.writeInt(261710000);
+        Parcel parcelZzcZ = zzcZ(1, parcelZza);
+        IBinder strongBinder = parcelZzcZ.readStrongBinder();
+        parcelZzcZ.recycle();
+        return strongBinder;
+    }
+}

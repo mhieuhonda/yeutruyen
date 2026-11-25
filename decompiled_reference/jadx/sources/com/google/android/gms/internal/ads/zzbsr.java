@@ -1,0 +1,14 @@
+package com.google.android.gms.internal.ads;
+
+import android.os.IInterface;
+import android.os.RemoteException;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-ads-api@@25.3.0 */
+/* JADX INFO: loaded from: classes2.dex */
+public interface zzbsr extends IInterface {
+    void zze(zzbsl zzbslVar) throws RemoteException;
+
+    void zzf(int i) throws RemoteException;
+
+    void zzg(com.google.android.gms.ads.internal.client.zze zzeVar) throws RemoteException;
+}

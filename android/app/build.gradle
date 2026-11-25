@@ -1,0 +1,40 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "vn.yeutruyen.app"
+    compileSdk = 36
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    defaultConfig {
+        applicationId = "vn.yeutruyen.app"
+        minSdk = 32
+        targetSdk = 36
+        versionCode = 30
+        versionName = "1.0.18"
+    }
+
+    buildTypes {
+        release {
+            // LƯU Ý: release signing key GỐC không nằm trong APK (Google Play App
+            // Signing). Dùng debug key để build thử; nạp lại keystore riêng khi có.
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}

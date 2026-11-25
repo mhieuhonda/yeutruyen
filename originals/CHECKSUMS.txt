@@ -1,0 +1,4 @@
+yeu_truyen_1.0.18.xapk  sha256  6a3214ca8fd04ddd51aaf93649d14fe3a9c898bf5977c1c4b2998bb59baf3794
+yeu_truyen_1.0.18.xapk  md5     c7a4d9e9955bed25d85f2c59ff42ffa0
+yeu_truyen_1.0.18.xapk  size    41,476,789 bytes
+signing_certificate.der sha256  bb45a1695cf679046d6f6b34c0dbf8f38600624004b908f9a932d904f83c2258

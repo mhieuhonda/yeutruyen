@@ -1,0 +1,28 @@
+// Khôi phục từ bản build 1.0.18 — flutter SDK path được flutter CLI tự ghi
+// vào android/local.properties khi chạy `flutter pub get` / `flutter run`.
+pluginManagement {
+    def flutterSdkPath = {
+        def properties = new Properties()
+        file("local.properties").withInputStream { properties.load(it) }
+        def flutterPath = properties.getProperty("flutter.sdk")
+        assert flutterPath != null, "flutter.sdk not set in local.properties"
+        return flutterPath
+    }()
+
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+    // Phiên bản khớp khuyến nghị của Flutter 3.3x (Dart 3.12.1) — chỉnh nếu cần.
+    id "com.android.application" version "8.9.1" apply false
+    id "org.jetbrains.kotlin.android" version "2.1.10" apply false
+}
+
+include ":app"

@@ -1,0 +1,46 @@
+name: yeutruyen_app
+description: "Yêu Truyện - Đọc & Nghe — khôi phục từ bản build 1.0.18 (vn.yeutruyen.app)."
+publish_to: "none"
+version: 1.0.18+30
+
+environment:
+  sdk: ">=3.12.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: any
+
+  # ---- Plugin xác nhận trực tiếp qua GeneratedPluginRegistrant.java ----
+  app_links: any
+  audioplayers: any
+  flutter_secure_storage: any
+  google_mobile_ads: any
+  image_picker: any
+  in_app_purchase: any
+  sign_in_with_apple: any
+  sqflite: any
+  shared_preferences: any
+  url_launcher: any
+  webview_flutter: any
+
+  # ---- Phát hiện qua package-URI trong AOT string pool ----
+  # (có thể là direct hoặc transitive; pin lại sau khi `flutter pub get`)
+  http: any
+  intl: any
+  cached_network_image: any
+  flutter_cache_manager: any
+  path_provider: any
+  path: any
+  rxdart: any
+  jni: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: any
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/yeutruyen/
